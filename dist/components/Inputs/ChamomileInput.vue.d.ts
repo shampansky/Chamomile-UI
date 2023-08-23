@@ -1,4 +1,4 @@
-declare const _default: import("vue").DefineComponent<{
+declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     type: {
         type: import("vue").PropType<"number" | "text">;
         required: true;
@@ -32,6 +32,13 @@ declare const _default: import("vue").DefineComponent<{
         type: import("vue").PropType<boolean>;
         required: true;
     };
-}>>, {}, {}>;
+}>>, {}, {}>, {
+    test?(_: {}): any;
+}>;
 export default _default;
+type __VLS_WithTemplateSlots<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
 //# sourceMappingURL=ChamomileInput.vue.d.ts.map

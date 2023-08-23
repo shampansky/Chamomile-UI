@@ -5,6 +5,7 @@
       :disabled="isDisabled"
       :name="name"
     >
+      <slot name="test"></slot>
   </label>
 </template>
 

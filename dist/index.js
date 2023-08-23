@@ -1,4 +1,4 @@
-import { defineComponent as ce, computed as x, ref as j, watch as ht, nextTick as Kt, watchEffect as Xe, openBlock as F, createElementBlock as X, normalizeClass as xe, normalizeStyle as Nt, withModifiers as me, createElementVNode as N, renderSlot as we, createBlock as De, resolveDynamicComponent as Jt, withCtx as he, Fragment as Le, createCommentVNode as er, renderList as He, toDisplayString as ne, resolveComponent as de, createTextVNode as Ae, withDirectives as pe, mergeProps as tr, vModelText as rr, vShow as Ce, createVNode as We, pushScopeId as ar, popScopeId as nr, unref as pt } from "vue";
+import { defineComponent as ce, computed as x, ref as j, watch as ht, nextTick as Kt, watchEffect as Xe, openBlock as F, createElementBlock as X, normalizeClass as xe, normalizeStyle as Nt, withModifiers as me, createElementVNode as N, renderSlot as he, createBlock as De, resolveDynamicComponent as Jt, withCtx as pe, Fragment as Le, createCommentVNode as er, renderList as He, toDisplayString as ne, resolveComponent as de, createTextVNode as Ae, withDirectives as ge, mergeProps as tr, vModelText as rr, vShow as Ce, createVNode as We, pushScopeId as ar, popScopeId as nr, unref as pt } from "vue";
 function z(e) {
   "@babel/helpers - typeof";
   return z = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(a) {
@@ -330,7 +330,7 @@ var xr = {
   }
 };
 const se = xr;
-var ge = {
+var we = {
   am: "am",
   pm: "pm",
   midnight: "midnight",
@@ -711,7 +711,7 @@ var ge = {
   // AM, PM, midnight, noon
   b: function(a, r, n) {
     var t = a.getUTCHours(), o;
-    switch (t === 12 ? o = ge.noon : t === 0 ? o = ge.midnight : o = t / 12 >= 1 ? "pm" : "am", r) {
+    switch (t === 12 ? o = we.noon : t === 0 ? o = we.midnight : o = t / 12 >= 1 ? "pm" : "am", r) {
       case "b":
       case "bb":
         return n.dayPeriod(o, {
@@ -739,7 +739,7 @@ var ge = {
   // in the morning, in the afternoon, in the evening, at night
   B: function(a, r, n) {
     var t = a.getUTCHours(), o;
-    switch (t >= 17 ? o = ge.evening : t >= 12 ? o = ge.afternoon : t >= 4 ? o = ge.morning : o = ge.night, r) {
+    switch (t >= 17 ? o = we.evening : t >= 12 ? o = we.afternoon : t >= 4 ? o = we.morning : o = we.night, r) {
       case "B":
       case "BB":
       case "BBB":
@@ -3520,7 +3520,7 @@ function An(e, a, r, n, t, o) {
         disabled: e.leftDisabled,
         onClick: a[0] || (a[0] = me((i) => e.$emit("left"), ["stop", "prevent"]))
       }, [
-        we(e.$slots, "arrow-left", {}, () => [
+        he(e.$slots, "arrow-left", {}, () => [
           Wn
         ], !0)
       ], 8, $n),
@@ -3528,8 +3528,8 @@ function An(e, a, r, n, t, o) {
         class: "v3dp__heading__center",
         onClick: a[1] || (a[1] = me((i) => e.$emit("heading"), ["stop", "prevent"]))
       }, {
-        default: he(() => [
-          we(e.$slots, "heading", {}, void 0, !0)
+        default: pe(() => [
+          he(e.$slots, "heading", {}, void 0, !0)
         ]),
         _: 3
       })),
@@ -3538,7 +3538,7 @@ function An(e, a, r, n, t, o) {
         disabled: e.rightDisabled,
         onClick: a[2] || (a[2] = me((i) => e.$emit("right"), ["stop", "prevent"]))
       }, [
-        we(e.$slots, "arrow-right", {}, () => [
+        he(e.$slots, "arrow-right", {}, () => [
           qn
         ], !0)
       ], 8, Sn)
@@ -3546,12 +3546,12 @@ function An(e, a, r, n, t, o) {
     N("div", Hn, [
       "subheading" in e.$slots ? (F(), X(Le, { key: 0 }, [
         N("div", Fn, [
-          we(e.$slots, "subheading", {}, void 0, !0)
+          he(e.$slots, "subheading", {}, void 0, !0)
         ]),
         In
       ], 64)) : er("", !0),
       N("div", Rn, [
-        we(e.$slots, "body", {}, () => [
+        he(e.$slots, "body", {}, () => [
           (F(!0), X(Le, null, He(e.items, (i) => (F(), X("button", {
             key: i.key,
             disabled: i.disabled,
@@ -3641,7 +3641,7 @@ function Bn(e, a, r, n, t, o) {
     onRight: e.nextPage,
     onElementClick: a[0] || (a[0] = (u) => e.$emit("select", u))
   }, {
-    heading: he(() => [
+    heading: pe(() => [
       Ae(ne(e.heading), 1)
     ]),
     _: 1
@@ -3733,7 +3733,7 @@ function Xn(e, a, r, n, t, o) {
     onHeading: a[0] || (a[0] = (u) => e.$emit("back")),
     onElementClick: a[1] || (a[1] = (u) => e.$emit("select", u))
   }, {
-    heading: he(() => [
+    heading: pe(() => [
       Ae(ne(e.heading), 1)
     ]),
     _: 1
@@ -3874,10 +3874,10 @@ function Kn(e, a, r, n, t, o) {
     onHeading: a[0] || (a[0] = (u) => e.$emit("back")),
     onElementClick: a[1] || (a[1] = (u) => e.$emit("select", u))
   }, {
-    heading: he(() => [
+    heading: pe(() => [
       Ae(ne(e.heading), 1)
     ]),
-    subheading: he(() => [
+    subheading: pe(() => [
       (F(!0), X(Le, null, He(e.weekDays, (u, l) => (F(), X("span", {
         key: u,
         class: xe(`v3dp__subheading__weekday__${l}`)
@@ -4012,10 +4012,10 @@ function ii(e, a, r, n, t, o) {
     viewMode: "time",
     onHeading: a[0] || (a[0] = (u) => e.$emit("back"))
   }, {
-    heading: he(() => [
+    heading: pe(() => [
       Ae(ne(e.padStartZero(e.hours)) + ":" + ne(e.padStartZero(e.minutes)), 1)
     ]),
-    body: he(() => [
+    body: pe(() => [
       N("div", ti, [
         (F(!0), X(Le, null, He(e.hoursList, (u) => (F(), X("button", {
           key: u.value,
@@ -4306,7 +4306,7 @@ function vi(e, a, r, n, t, o) {
     style: Nt(e.variables(e.$attrs.style))
   }, [
     N("div", si, [
-      pe(N("input", tr({
+      ge(N("input", tr({
         type: "text",
         ref: "inputRef",
         readonly: !e.typeable,
@@ -4322,8 +4322,8 @@ function vi(e, a, r, n, t, o) {
       }), null, 16, di), [
         [rr, e.input]
       ]),
-      pe(N("div", ci, [
-        we(e.$slots, "clear", { onClear: e.clearModelValue }, () => [
+      ge(N("div", ci, [
+        he(e.$slots, "clear", { onClear: e.clearModelValue }, () => [
           N("i", {
             onClick: a[5] || (a[5] = (d) => e.clearModelValue())
           }, "x")
@@ -4332,7 +4332,7 @@ function vi(e, a, r, n, t, o) {
         [Ce, e.clearable && e.modelValue]
       ])
     ]),
-    pe(We(i, {
+    ge(We(i, {
       pageDate: e.pageDate,
       "onUpdate:pageDate": a[6] || (a[6] = (d) => e.updatePageDate("year", d)),
       selected: e.modelValue,
@@ -4342,7 +4342,7 @@ function vi(e, a, r, n, t, o) {
     }, null, 8, ["pageDate", "selected", "lowerLimit", "upperLimit", "onSelect"]), [
       [Ce, e.viewShown === "year"]
     ]),
-    pe(We(u, {
+    ge(We(u, {
       pageDate: e.pageDate,
       "onUpdate:pageDate": a[7] || (a[7] = (d) => e.updatePageDate("month", d)),
       selected: e.modelValue,
@@ -4355,7 +4355,7 @@ function vi(e, a, r, n, t, o) {
     }, null, 8, ["pageDate", "selected", "onSelect", "lowerLimit", "upperLimit", "format", "locale"]), [
       [Ce, e.viewShown === "month"]
     ]),
-    pe(We(l, {
+    ge(We(l, {
       pageDate: e.pageDate,
       "onUpdate:pageDate": a[9] || (a[9] = (d) => e.updatePageDate("day", d)),
       selected: e.modelValue,
@@ -4373,7 +4373,7 @@ function vi(e, a, r, n, t, o) {
     }, null, 8, ["pageDate", "selected", "weekStartsOn", "lowerLimit", "upperLimit", "headingFormat", "disabledDates", "locale", "weekdayFormat", "allow-outside-interval", "format", "onSelect"]), [
       [Ce, e.viewShown === "day"]
     ]),
-    pe(We(s, {
+    ge(We(s, {
       pageDate: e.pageDate,
       visible: e.viewShown === "time",
       selected: e.modelValue,
@@ -4907,7 +4907,8 @@ const Ki = Zi, ro = /* @__PURE__ */ ce({
         type: a.type,
         disabled: a.isDisabled,
         name: a.name
-      }, null, 8, eo)
+      }, null, 8, eo),
+      he(a.$slots, "test")
     ]));
   }
 });
